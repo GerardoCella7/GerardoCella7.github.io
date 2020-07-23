@@ -1,0 +1,45 @@
+@font-face {
+  font-family: GrenzeGotish;
+  src: url(./font/GrenzeGotisch.ttf);
+}
+@font-face {
+  font-family: Lobster;
+  src: url(./font/Lobster.ttf);
+}
+
+body{
+  text-align: center;
+  background-color: #DABB8D;
+  padding-top: 3em;
+}
+
+#quote{
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+#refresh{
+  margin: 1em;
+}
+
+.error{
+  color: red;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.photo{
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 5%;
+}
+
+.author, .total-quotes{
+  font-family: GrenzeGotish;
+}
+
+.quote{
+  font-family: Lobster;
+}
