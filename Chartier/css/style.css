@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+}
+
+img {
+  display: block;
+}
+
+label span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid rgba(25, 23, 22, 0.12);
+  background: #fffaf6;
+  padding: 0.875rem 1rem;
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #b96f55;
+  box-shadow: 0 0 0 4px rgba(185, 111, 85, 0.15);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.35rem;
+  left: 0;
+  height: 2px;
+  background: #b96f55;
+  content: "";
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 160ms ease;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.menu-line,
+.menu-line::before,
+.menu-line::after {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  border-radius: 999px;
+  background: #191716;
+  content: "";
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.menu-line {
+  position: relative;
+}
+
+.menu-line::before {
+  position: absolute;
+  top: -0.4rem;
+}
+
+.menu-line::after {
+  position: absolute;
+  top: 0.4rem;
+}
+
+.menu-open .menu-line {
+  background: transparent;
+}
+
+.menu-open .menu-line::before {
+  transform: translateY(0.4rem) rotate(45deg);
+}
+
+.menu-open .menu-line::after {
+  transform: translateY(-0.4rem) rotate(-45deg);
+}
+
+.section-wrap {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding: 5rem 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .section-wrap {
+    padding-inline: 2rem;
+  }
+}
+
+.section-heading {
+  margin-bottom: 2.5rem;
+  max-width: 44rem;
+}
+
+.section-heading p,
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #b96f55;
+}
+
+.section-heading h2 {
+  margin-top: 0.75rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+
+.stat-tile {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 1.25rem;
+  background: rgba(255, 250, 246, 0.92);
+  padding: 1.25rem;
+  box-shadow: 0 24px 60px rgba(25, 23, 22, 0.12);
+}
+
+.stat-tile span {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat-tile p {
+  margin-top: 0.35rem;
+  color: rgba(47, 52, 48, 0.75);
+  font-weight: 600;
+}
+
+.service-card {
+  min-height: 18rem;
+  border: 1px solid rgba(25, 23, 22, 0.1);
+  border-radius: 1.5rem;
+  background: white;
+  padding: 1.5rem;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-0.35rem);
+  box-shadow: 0 24px 60px rgba(25, 23, 22, 0.12);
+}
+
+.service-card span {
+  color: #b96f55;
+  font-weight: 800;
+}
+
+.service-card h3,
+.team-card h3 {
+  margin-top: 4rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.service-card p,
+.team-card p {
+  margin-top: 0.75rem;
+  color: rgba(47, 52, 48, 0.72);
+  line-height: 1.7;
+}
+
+.gallery-image {
+  width: 100%;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 24px 60px rgba(25, 23, 22, 0.12);
+}
+
+.feature-check {
+  border-left: 3px solid #b96f55;
+  background: rgba(255, 250, 246, 0.72);
+  padding: 1rem;
+  font-weight: 700;
+}
+
+.team-card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: white;
+  box-shadow: 0 24px 60px rgba(25, 23, 22, 0.08);
+}
+
+.team-card img {
+  aspect-ratio: 4 / 5;
+  width: 100%;
+  object-fit: cover;
+}
+
+.team-card div {
+  padding: 1.5rem;
+}
+
+.team-card h3 {
+  margin-top: 0;
+}
+
+.price-row {
+  display: flex;
+  min-height: 10rem;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+
+.price-row p {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.price-row span {
+  color: #f7e7df;
+  font-weight: 800;
+}
+
+.price-row small {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.quote-card {
+  border-radius: 1.25rem;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.quote-card cite {
+  display: block;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 800;
+}

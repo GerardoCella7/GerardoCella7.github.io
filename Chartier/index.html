@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chartier coiffure est une page de presentation moderne pour les coupes, les colorations, les coiffages et les rendez-vous de coiffure de mariage."
+    />
+    <title>Chartier coiffure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#191716",
+              clay: "#b96f55",
+              blush: "#f7e7df",
+              ivory: "#fffaf6",
+              sage: "#7b8d77",
+              charcoal: "#2f3430"
+            },
+            fontFamily: {
+              display: ["Playfair Display", "Georgia", "serif"],
+              sans: ["Inter", "ui-sans-serif", "system-ui"]
+            },
+            boxShadow: {
+              soft: "0 24px 60px rgba(25, 23, 22, 0.12)"
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-neutral-100 font-sans text-ink antialiased">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/30 bg-neutral-100/85 backdrop-blur">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8" aria-label="Navigation principale">
+        <a href="#home" class="font-display text-2xl font-bold">Chartier coiffure</a>
+        <div class="hidden items-center gap-8 text-sm font-semibold text-charcoal md:flex">
+          <a class="nav-link" href="#pricing">Tarifs</a>
+          <a class="nav-link" href="#stylists">Coiffeurs</a>
+          <a class="nav-link" href="#about">A propos</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+        <a
+          href="#booking-form"
+          class="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-clay md:inline-flex"
+        >
+          Reserver
+        </a>
+        <button
+          id="menu-toggle"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 md:hidden"
+          type="button"
+          aria-label="Ouvrir le menu de navigation"
+          aria-expanded="false"
+        >
+          <span class="menu-line"></span>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-ink/10 bg-neutral-100 px-5 py-4 md:hidden">
+        <div class="grid gap-4 text-sm font-semibold">
+          <a href="#services">Services</a>
+          <a href="#about">A propos</a>
+          <a href="#stylists">Coiffeurs</a>
+          <a href="#pricing">Tarifs</a>
+          <a href="#contact">Contact</a>
+          <a href="#contact" class="rounded-full bg-ink px-5 py-3 text-center text-white">Reserver</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="relative min-h-screen overflow-hidden pt-28">
+        <div
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: linear-gradient(90deg, rgba(25, 23, 22, 0.78), rgba(25, 23, 22, 0.18)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=85');"
+          aria-hidden="true"
+        ></div>
+        <div class="relative mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl items-center px-5 pb-20 lg:px-8">
+          <div class="max-w-2xl text-white">
+            <p class="mb-4 text-sm font-bold uppercase tracking-[0.28em] text-blush">Salon de coiffure a Gosselies</p>
+            <h1 class="font-display text-5xl font-bold leading-tight sm:text-6xl lg:text-7xl">
+              L'art de la coiffure moderne, avec un fini naturel.
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-white/85">
+              Coupes precises, colorations lumineuses et coiffages d'occasion penses pour votre texture, votre routine et votre style.
+            </p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="#contact" class="rounded-full bg-clay px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-ink">
+                Reserver un fauteuil
+              </a>
+              <a href="#services" class="rounded-full border border-white/50 px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-ink">
+                Decouvrir les services
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="relative mx-auto -mt-16 grid max-w-5xl gap-4 px-5 pb-10 sm:grid-cols-3 lg:px-8">
+          <div class="stat-tile">
+            <span>12+</span>
+            <p>annees a creer des looks signature</p>
+          </div>
+          <div class="stat-tile">
+            <span>4.9</span>
+            <p>note moyenne des clientes</p>
+          </div>
+          <div class="stat-tile">
+            <span>100%</span>
+            <p>options de soins couleur vegan</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="bg-charcoal py-20 text-white">
+        <div class="mx-auto mb-12 max-w-3xl text-center">
+          <h2 class="mt-3 font-display text-4xl font-bold leading-tight text-clay sm:text-5xl">
+            Des prestations claires pour chaque envie coiffure.
+          </h2>
+          <p class="mt-5 text-lg leading-8 text-blush/75">
+            Choisissez un service, profitez d'un diagnostic personnalise, puis repartez avec une coupe ou une couleur facile a vivre au quotidien.
+          </p>
+        </div>
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-10 max-w-2xl">
+            <p class="eyebrow text-blush">Tarifs</p>
+          </div>
+          <div id="pricing-list" class="grid gap-4 md:grid-cols-3">
+            <!-- Le contenu sera généré ici -->
+          </div>
+        </div>
+      </section>
+
+      <section id="stylists" class="section-wrap">
+        <div class="section-heading">
+          <p>Coiffeurs</p>
+          <h2>Rencontrez les artistes derriere le fauteuil.</h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=700&q=80" alt="Portrait de Mara, coiffeuse du salon" />
+            <div>
+              <h3>Mara Jules</h3>
+              <p>Directrice creative, specialiste des blonds et des coupes precises.</p>
+            </div>
+          </article>
+          <article class="team-card">
+            <img src="https://images.unsplash.com/photo-1592621385612-4d7129426394?auto=format&fit=crop&w=700&q=80" alt="Portrait de Noa, coiffeur du salon" />
+            <div>
+              <h3>Noa Silva</h3>
+              <p>Coloriste, specialiste des boucles, du gloss et des bruns naturels.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      
+      <section id="about" class="bg-charcoal py-20 text-white">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:px-8">
+          <div class="grid grid-cols-2 gap-4">
+            <img
+              class="h-full min-h-[28rem] rounded-3xl object-cover shadow-soft"
+              src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80"
+              alt="Cliente du salon avec cheveux blonds coiffes"
+            />
+            <div class="grid gap-4">
+              <img
+                class="h-56 rounded-3xl object-cover shadow-soft sm:h-64"
+                src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=900&q=80"
+                alt="Outils de coiffure et poste de travail du salon"
+              />
+              <div class="rounded-3xl bg-ink p-6 text-white shadow-soft">
+                <p class="font-display text-4xl font-bold">12+</p>
+                <p class="mt-2 text-sm font-semibold text-white/75">annees d'experience salon</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-white/10 bg-ink p-8 shadow-soft lg:p-10">
+            <p class="text-sm font-bold uppercase tracking-[0.24em] text-clay">A propos</p>
+            <h2 class="mt-3 font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
+              Un salon moderne, chaleureux et attentif a chaque detail.
+            </h2>
+            <p class="mt-5 text-lg leading-8 text-white/70">
+              Chez Chartier coiffure, chaque rendez-vous commence par une vraie ecoute : votre style, votre texture, votre rythme de vie et le resultat que vous souhaitez garder apres le salon.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border border-white/10 bg-white/8 p-5">
+                <h3 class="font-bold">Diagnostic personnalise</h3>
+                <p class="mt-2 text-sm leading-6 text-white/65">Une approche adaptee a votre visage, votre couleur et vos habitudes.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/8 p-5">
+                <h3 class="font-bold">Finitions naturelles</h3>
+                <p class="mt-2 text-sm leading-6 text-white/65">Des coiffages elegants, lumineux et faciles a reproduire.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/8 p-5">
+                <h3 class="font-bold">Ambiance apaisante</h3>
+                <p class="mt-2 text-sm leading-6 text-white/65">Un moment calme, confortable et pense pour vous.</p>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/8 p-5">
+                <h3 class="font-bold">Conseils d'entretien</h3>
+                <p class="mt-2 text-sm leading-6 text-white/65">Une routine simple pour prolonger la coupe et la couleur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-wrap">
+        <div class="rounded-[2rem] bg-sage p-8 text-white shadow-soft md:p-12">
+          <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+            <div>
+              <p class="eyebrow text-white/75">Avis clientes</p>
+              <h2 class="mt-3 font-display text-4xl font-bold">Des couleurs douces, des avis enthousiastes.</h2>
+              <a class="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.22em] text-blush hover:text-blush/80 py-12" target="_blank" href="https://www.google.com/search?sca_esv=4995decb4bdc4888&sxsrf=APpeQnslCdE19BA832HiWJNDmqK8hoQzUw:1782600002951&q=Coiffure+Chartier+Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDMxMLIwNjY1NrOwMDM0NDM1Mt3AyPiKUcw5PzMtrbQoVcE5I7GoJDO1SMGxLLN4ESsOCQCVNGzLTQAAAA&rldimm=16402833536886116525&tbm=lcl&hl=fr-BE&sa=X&ved=2ahUKEwiyh8-_vqiVAxXbTKQEHa7oA5QQ9fQKegQIKhAG&biw=1920&bih=911&dpr=1#lkt=LocalPoiReviews&lpg=cid:CgIgARICCAI%3D">
+                <span>Voir les avis sur Google</span>
+              </a>
+            </div>
+            <div class="grid gap-4 md:grid-cols-2">
+              <blockquote class="quote-card">
+                &laquo; Le coiffeur au 👍, je vous le recommande. Le patron et fille 👍 très bonne à l écouter de sa clientèle. A chaque foix mes cheveux son bien fait &raquo;
+                <cite>Aurelie R.</cite>
+              </blockquote>
+              <blockquote class="quote-card">
+                &laquo; Salon de coiffure au Top personnel à l'écoute et toujours de bons conseils . Je recommande vivement... &raquo;
+                <cite>Florenza F.</cite>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-ink py-20 text-white">
+        <div class="mx-auto max-w-7xl px-5 lg:px-8">
+          <div class="mb-12 max-w-3xl">
+            <p class="eyebrow text-blush">Contact</p>
+            <h2 class="mt-3 font-display text-4xl font-bold leading-tight sm:text-5xl">
+              Prenez rendez-vous ou passez nous voir au salon.
+            </h2>
+            <p class="mt-5 text-lg leading-8 text-white/70">
+              Une question sur une coupe, une couleur ou un soin ? Appelez-nous, ecrivez-nous sur WhatsApp ou envoyez une demande de rendez-vous.
+            </p>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+            <div class="grid gap-6">
+              <div class="rounded-3xl bg-white p-6 text-ink shadow-soft">
+                <p class="text-sm font-bold uppercase tracking-[0.22em] text-clay">Coordonnees</p>
+                <div class="mt-6 grid gap-4">
+                  <a class="rounded-2xl border border-ink/10 bg-neutral-100 p-5 transition hover:border-clay/40" href="tel:+32472365512">
+                    <span class="text-sm font-bold uppercase tracking-[0.18em] text-charcoal/55">Telephone</span>
+                    <strong class="mt-2 block text-xl">0472 36 55 12</strong>
+                  </a>
+                  <a
+                    class="rounded-2xl border border-ink/10 bg-neutral-100 p-5 transition hover:border-clay/40"
+                    href="https://www.google.com/maps/search/?api=1&query=Rue%20Astrid%2011%2C%206041%20Charleroi"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span class="text-sm font-bold uppercase tracking-[0.18em] text-charcoal/55">Adresse</span>
+                    <strong class="mt-2 block text-xl">Rue Astrid 11</strong>
+                    <span class="mt-1 block text-charcoal/70">6041 Charleroi, Belgique</span>
+                  </a>
+                </div>
+                <a
+                  href="https://wa.me/32472365512"
+                  target="_blank"
+                  rel="noreferrer"
+                  class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-sage px-6 py-4 text-center font-bold text-white transition hover:bg-ink"
+                >
+                  Contacter sur WhatsApp
+                </a>
+              </div>
+
+              <div class="rounded-3xl bg-white p-6 text-ink shadow-soft">
+                <p class="text-sm font-bold uppercase tracking-[0.22em] text-clay">Horaires</p>
+                <dl class="mt-6 grid gap-3 text-sm font-semibold">
+                  <div class="flex items-center justify-between gap-4 border-b border-ink/10 pb-3">
+                    <dt>Mardi - Vendredi</dt>
+                    <dd class="text-charcoal/70">09:00 - 18:30</dd>
+                  </div>
+                  <div class="flex items-center justify-between gap-4 border-b border-ink/10 pb-3">
+                    <dt>Samedi</dt>
+                    <dd class="text-charcoal/70">09:00 - 17:00</dd>
+                  </div>
+                  <div class="flex items-center justify-between gap-4">
+                    <dt>Dimanche - Lundi</dt>
+                    <dd class="text-charcoal/70">Ferme</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+
+            <div class="grid gap-6">
+              <div class="overflow-hidden rounded-3xl bg-white p-2 shadow-soft">
+                <iframe
+                  class="h-80 w-full rounded-[1.25rem] border-0 md:h-[28rem]"
+                  title="Carte Google Maps de Chartier coiffure"
+                  src="https://www.google.com/maps?q=Rue%20Astrid%2011%2C%206041%20Charleroi%2C%20Belgique&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+
+              <form id="booking-form" class="grid gap-4 rounded-3xl bg-white p-6 text-ink shadow-soft md:grid-cols-2" action="#" method="post">
+                <label>
+                  <span>Nom</span>
+                  <input type="text" name="name" placeholder="Votre nom" required class="p-2"/>
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" placeholder="vous@exemple.com" required class="p-2"/>
+                </label>
+                <label>
+                  <span>Service</span>
+                  <select id="booking-service" name="service" required class="p-2" >
+                    <option value="">Choisir un service</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Date souhaitee</span>
+                  <input id="booking-date" type="date" name="date" required class="p-2" min="2026-06-30"/>
+                </label>
+                <label class="md:col-span-2">
+                  <span>Message</span>
+                  <textarea name="message" rows="4" placeholder="Parlez-nous de vos envies coiffure" class="p-2 "></textarea>
+                </label>
+                <button class="rounded-full bg-clay px-7 py-4 font-bold text-white transition hover:bg-ink md:col-span-2" type="submit">
+                  Envoyer la demande
+                </button>
+                <p id="form-message" class="hidden text-sm font-semibold text-sage md:col-span-2"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-neutral-100 px-5 py-8 text-sm text-charcoal/70 lg:px-8">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 border-t border-ink/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; 2026 Chartier coiffure. Tous droits reserves.</p>
+        <p>Rue Astrid 11, 6041 Charleroi &middot; 0472 36 55 12</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
